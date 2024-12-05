@@ -3,6 +3,7 @@
 # CVE-2020-1747 
 
 import yaml
+import requests
 import subprocess
 import os
 from colorama import Style, Fore, init
@@ -25,6 +26,10 @@ def index():
 @app.route('/upload')
 def upload():
     return render_template('upload.html')
+
+@app.route('/apropos')
+def apropos():
+    return render_template('apropos.html')
 
 @app.route('/error')
 def error():
